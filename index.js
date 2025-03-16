@@ -1,5 +1,5 @@
 let player = {
-    name: "Per",
+    name: "💰 Morning",
     chips: 200
 }
 
@@ -16,6 +16,7 @@ let playerEl = document.getElementById("player-el")
 playerEl.textContent = player.name + ": $" + player.chips
 
 function getRandomCard() {
+    messageEl.textContent = message
     let randomNumber = Math.floor( Math.random()*13 ) + 1
     if (randomNumber > 10) {
         return 10
@@ -33,22 +34,24 @@ function startGame() {
     cards = [firstCard, secondCard]
     sum = firstCard + secondCard
     renderGame()
+    player.chips -= 20
+    playerEl.textContent = player.name + ": $" + player.chips
 }
 
 function renderGame() {
-    cardsEl.textContent = "Cards: "
+    cardsEl.textContent = "🂣 Cards: "
     for (let i = 0; i < cards.length; i++) {
-        cardsEl.textContent += cards[i] + " "
+        cardsEl.textContent += cards[i] + " | "
     }
     
-    sumEl.textContent = "Sum: " + sum
+    sumEl.textContent = "+ Sum: " + sum
     if (sum <= 20) {
-        message = "Do you want to draw a new card?"
+        message = "Do you want to draw a new card? 🤔"
     } else if (sum === 21) {
-        message = "You've got Blackjack!"
+        message = "You've got Blackjack! 🤑"
         hasBlackJack = true
     } else {
-        message = "You're out of the game!"
+        message = "You're out of the game! 😢"
         isAlive = false
     }
     messageEl.textContent = message
@@ -61,5 +64,15 @@ function newCard() {
         sum += card
         cards.push(card)
         renderGame()        
-    }
+    } 
+}
+
+function resetGame() {
+    player.chips = 200
+    playerEl.textContent = player.name + ": $" + player.chips
+    messageEl.textContent = "Let's play 💰, Draw pair of cards"
+    cardsEl.textContent = "🂣 Cards: 0"
+    sumEl.textContent = "+ Sum: 0"
+    hasBlackJack = false
+    isAlive = false
 }

@@ -1,5 +1,5 @@
 body {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', Arial, sans-serif;
+    font-family: "DM Serif Text", serif;
     background-image: url("images/bg-img-green.png");
     background-position: center;
     font-weight: bold;
@@ -8,22 +8,84 @@ body {
 }
 
 h1 {
-    color: goldenrod;
+    /* color: #002906; */
+    background: linear-gradient(#05ff7a, #d79e02);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    font-family: "Gravitas One", serif;
+    font-weight: bold;
+    font-size: 58px;
+    letter-spacing: 12px;
+
+}
+
+p {
+    font-size: 24px;
+}
+
+#player-el{
+    
+    font-size: 14px;
+    font-style: normal;
+    letter-spacing: 2px;
+
+
 }
 
 #message-el {
-    font-style: italic;
+    font-size: 48px;
+    font-size: large;
+    border: 2px dotted #ffffff;
+    padding: 60px 12px;
+    background-color: #12320a;
+    /* margin: 0px 120px; */
 }
 
 button {
-    color: #016f32;
+    color: #002405;
     width: 150px;
-    background: goldenrod;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    background: #00ff26;
+    padding: 6px 12px;
     font-weight: bold;
-    border: none;
-    border-radius: 2px;
     margin-bottom: 2px;
     margin-top: 2px;
+    display: block;
+    margin: 12px auto;
+    font-family: "DM Serif Text", serif;
+    font-size: small;
+    border: 2px solid #004d0a;
+    border-radius: 06px;
+    
+}
+
+#drawButton {
+
+    padding: 24px 12px;
+    background: #ffd000;
+    opacity: 1;
+
+}
+
+button:hover {
+    color: #ffffff;
+    width: 150px;
+    background: #161616;
+}
+
+#drawbutton:hover {
+    color: #ffffff;
+    width: 150px;
+    background: #161616;
+}
+
+#resetGame {
+
+    background: rgba(48, 99, 0, 0.6);
+    color: white;
+}
+
+#resetGame:hover {
+    color: #ffffff;
+    width: 150px;
+    background: #161616;
 }

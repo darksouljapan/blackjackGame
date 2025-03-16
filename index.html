@@ -1,15 +1,19 @@
 <html>
     <head>
         <link rel="stylesheet" href="index.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Gravitas+One&display=swap" rel="stylesheet">
     </head>
     <body>
         <h1>Blackjack</h1>
-        <p id="message-el">Want to play a round?</p>
-        <p id="cards-el">Cards:</p>
-        <p id="sum-el">Sum:</p>
-        <button onclick="startGame()">START GAME</button>
-        <button onclick="newCard()">NEW CARD</button>
+        <p id="message-el">Let's play 💰, Draw pair of cards</p>
+        <p id="cards-el">🂣 Cards:</p>
+        <p id="sum-el">+ Sum:</p>
+        <button onclick="startGame()">Start New Game</button>
+        <button onclick="newCard()" id="drawButton">Draw New Card</button>
         <p id="player-el"></p>
+        <button id="resetGame" onclick="resetGame()">Reset Game</button>
         <script src="index.js"></script>
     </body>
 </html>
